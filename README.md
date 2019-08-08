@@ -33,3 +33,6 @@ sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
 
 # turn off auto on base env anaconda
 conda config --set auto_activate_base false
+
+# fix error can not install package or clone git
+echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
