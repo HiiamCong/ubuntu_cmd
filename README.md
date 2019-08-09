@@ -36,3 +36,10 @@ conda config --set auto_activate_base false
 
 # fix error can not install package or clone git
 echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
+
+# remote jupyter notebook from server
+1. on server: 
+    jupyter notebook --no-browser --port=8889
+2. on local:
+    ssh -N -f -L localhost:8888:localhost:8889 -p55022 vbee@14.160.70.42
+    localhost:8888
