@@ -43,3 +43,7 @@ echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
 2. on local:
     ssh -N -f -L localhost:8888:localhost:8889 -p55022 vbee@14.160.70.42
     localhost:8888
+
+# install .deb file
+sudo dpkg -i /path/to/deb/file
+sudo apt-get install -f
